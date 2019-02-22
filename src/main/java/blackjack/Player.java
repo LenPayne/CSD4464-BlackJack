@@ -5,15 +5,19 @@
  */
 package blackjack;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
 /**
  *
  * @author c0587637
  */
 class Player {
-    private List<Card> hand;
+    private List<Card> hand = new ArrayList<>();
     private String username;
     private String password;
     private String email;
@@ -26,9 +30,14 @@ class Player {
     private int losses;
 
     public Player() {
+        hand = new ArrayList<>();
     }
-
+    
     public List<Card> getHand() {
+        return hand;
+    }
+    
+    public List<Card> getCards() {
         return hand;
     }
 

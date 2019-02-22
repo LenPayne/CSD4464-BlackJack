@@ -37,12 +37,15 @@ public class Deck {
         while (!cards.empty()) {
             pool.add(cards.pop());
         }
-        pool.sort(new Comparator<Card>() {
+        Comparator c = new Comparator<Card>() {
             @Override
             public int compare(Card c1, Card c2) {
-                return (int) Math.round(Math.random() * 2 - 1);
+                return (int) Math.floor(Math.random() * 3 - 1);
             }
-        });
+        };
+        pool.sort(c);
+        pool.sort(c);
+        pool.sort(c);
         while (!pool.isEmpty()) {
             cards.push(pool.remove(0));
         }

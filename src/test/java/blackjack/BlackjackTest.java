@@ -44,7 +44,7 @@ public class BlackjackTest {
         Player p = new Player();
         instance.sitDown(p, 0);
         instance.playHand();
-        instance.hit(p);
+        instance.hit();
         instance.stand();
         instance.dealerFinish();
         System.out.println("Dealer Hand");
@@ -58,83 +58,4 @@ public class BlackjackTest {
         }
         System.out.println("Value: " + instance.bestValueOfHand(p.getHand()));
     }
-
-    /**
-     * Test of sitDown method, of class Blackjack.
-     */
-    @org.junit.Test
-    public void testSitDown() {
-        System.out.println("sitDown");
-        Player player = null;
-        int seat = 0;
-        Blackjack instance = new Blackjack();
-        instance.sitDown(player, seat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of playHand method, of class Blackjack.
-     */
-    @org.junit.Test
-    public void testPlayHand() {
-        System.out.println("playHand");
-        Blackjack instance = new Blackjack();
-        instance.playHand();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of stand method, of class Blackjack.
-     */
-    @org.junit.Test
-    public void testStand() {
-        System.out.println("stand");
-        Blackjack instance = new Blackjack();
-        instance.stand();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of hit method, of class Blackjack.
-     */
-    @org.junit.Test
-    public void testHit() {
-        System.out.println("hit");
-        Player p = null;
-        Blackjack instance = new Blackjack();
-        instance.hit(p);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of dealerFinish method, of class Blackjack.
-     */
-    @org.junit.Test
-    public void testDealerFinish() {
-        System.out.println("dealerFinish");
-        Blackjack instance = new Blackjack();
-        instance.dealerFinish();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of bestValueOfHand method, of class Blackjack.
-     */
-    @org.junit.Test
-    public void testBestValueOfHand() {
-        System.out.println("bestValueOfHand");
-        List<Card> hand = null;
-        Blackjack instance = new Blackjack();
-        int expResult = 0;
-        int result = instance.bestValueOfHand(hand);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }
